@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Cybersecurity Consultant | Data Scientist | Ethical Hacker | AI Security Researcher | DevSecOps Practitioner</b><br>
-  🔐 Empowering Organizations Through AI-Driven, Scalable, and Secure Technology Solutions <br>
+  🔐 Empowering Organisations Through AI-Driven, Scalable, and Secure Technology Solutions <br>
   🌍 Passionate about Red & Blue Team Ops · AIOps · Cloud-Native Security · Privacy by Design · Ethical Hacking
 </p>
 
@@ -12,10 +12,10 @@
 
 🎯 Results-oriented cybersecurity expert with a dual background in **AI/Data Science** and **Enterprise Security Consulting**.
 
-- 🌐 5+ years of global experience (UK, UAE, Pakistan)  
+- 🌐 5+ years of global experience (UK, USA, EU, Australia, Pakistan)  
 - 🎓 MSc in Cybersecurity · MBA in Management · BS in Applied Mathematics  
 - 🛠️ Trained in over **200+ labs** (Cloud, AI, DevSecOps, Red Teaming)  
-- 🧠 Bug bounty contributor to 200+ private programs  
+- 🧠 Bug bounty contributor to 500+ private and public programs  
 - 📜 Frameworks: ISO/IEC 27001 · NIST CSF · MITRE ATT&CK · GDPR · OWASP Top 10
 
 ---
@@ -28,7 +28,7 @@
 | ☁️ Cloud Security | `CloudHarden`    | AWS Security Audits, IaC Hardening, and Continuous Monitoring                 |
 | 🔐 Password Audit | `SentinelPass`   | CLI Tool for Enterprise Password Auditing using zxcvbn + JtR                  |
 | 🔁 DevSecOps      | `SecuGraph`      | Security-Integrated CI/CD Pipeline with Docker + GitHub Actions               |
-| 🤖 AI + Security  | Ongoing Research | Model Risk Mgmt, Threat Modeling, and Secure ML Pipelines                     |
+| 🤖 AI + Security  | Ongoing Research | Model Risk Mgmt, Threat Modelling, and Secure ML Pipelines                     |
 
 ---
 
