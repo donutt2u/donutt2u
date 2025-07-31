@@ -33,7 +33,6 @@ I'm always open to discussing new opportunities, sharing insights, or collaborat
 
 Feel free to reach out via the contact details on my landing page, or connect with me on:
 
-* [LinkedIn](https://www.linkedin.com/in/your-linkedin-profile) *(Replace with your LinkedIn profile URL)*
-* [Twitter / X](https://twitter.com/your-twitter-handle) *(Optional: Replace with your Twitter handle)*
+* [LinkedIn](https://www.linkedin.com/in/donutt2u/)
 
 Thank you for visiting!
