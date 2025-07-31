@@ -1,4 +1,4 @@
-<h1 align="center">👋 Assalamu Alaikum, I'm Muhammad Arslan</h1>
+<h1 align="center">👋 Hi, I'm Muhammad Arslan Akhtar</h1>
 
 <p align="center">
   <b>Cybersecurity Consultant | Data Scientist | Ethical Hacker | AI Security Researcher | DevSecOps Practitioner</b><br>
