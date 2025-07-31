@@ -1,33 +1,34 @@
-# 👋 Assalamu Alaikum, I'm Muhammad Arslan
+<h1 align="center">👋 Assalamu Alaikum, I'm Muhammad Arslan</h1>
 
-**Cybersecurity Consultant | Data Scientist | Ethical Hacker | AI Security Researcher | DevSecOps Practitioner**
-
-🔐 Empowering Organizations Through AI-Driven, Scalable, and Secure Technology Solutions  
-🌍 Passionate about Red & Blue Team Ops | AIOps | Cloud-Native Security | Privacy by Design | Ethical Hacking
+<p align="center">
+  <b>Cybersecurity Consultant | Data Scientist | Ethical Hacker | AI Security Researcher | DevSecOps Practitioner</b><br>
+  🔐 Empowering Organizations Through AI-Driven, Scalable, and Secure Technology Solutions <br>
+  🌍 Passionate about Red & Blue Team Ops · AIOps · Cloud-Native Security · Privacy by Design · Ethical Hacking
+</p>
 
 ---
 
 ## 🚀 About Me
 
-🎯 I’m a results-oriented cybersecurity professional with a dual background in **AI/Data Science** and **Enterprise Cybersecurity Consulting**, backed by:
+🎯 Results-oriented cybersecurity expert with a dual background in **AI/Data Science** and **Enterprise Security Consulting**.
 
-- 📍 5+ years of global experience (UK, UAE, Pakistan)
-- 📖 MSc in Cybersecurity & MBA in Management (Tech Strategy)
-- 🎓 BS in Applied Mathematics + 3 Bootcamps in AI, Cloud, DevOps & Ethical Hacking
-- 🧠 Contributor to 200+ private programs as a bug bounty researcher
-- 🏛️ Aligned with ISO/IEC 27001, NIST CSF, OWASP Top 10, MITRE ATT&CK, and GDPR
+- 🌐 5+ years of global experience (UK, UAE, Pakistan)  
+- 🎓 MSc in Cybersecurity · MBA in Management · BS in Applied Mathematics  
+- 🛠️ Trained in over **200+ labs** (Cloud, AI, DevSecOps, Red Teaming)  
+- 🧠 Bug bounty contributor to 200+ private programs  
+- 📜 Frameworks: ISO/IEC 27001 · NIST CSF · MITRE ATT&CK · GDPR · OWASP Top 10
 
 ---
 
 ## 🔭 Current Focus Areas
 
-| Domain | Project | Description |
-|-------|---------|-------------|
-| 🛡️ Red Teaming | `RedSage` | Advanced Threat Detection & Response Simulation using MITRE ATT&CK |
-| ☁️ Cloud Security | `CloudHarden` | End-to-End AWS Cloud Security Assessment with IaC Hardening & ScoutSuite |
-| 🔐 Password Auditing | `SentinelPass` | CLI Tool simulating password strength attacks with John the Ripper |
-| 🔁 DevSecOps | `SecuGraph` | Full-Stack CI/CD Security Pipeline with IaC Scanning & Secrets Detection |
-| 🧪 AI + Security | Research | Responsible AI, Model Risk Management, and AI Threat Modeling |
+| 🌐 Domain         | ⚙️ Project        | 📌 Description                                                                 |
+|------------------|------------------|--------------------------------------------------------------------------------|
+| 🛡️ Red Teaming   | `RedSage`        | Threat Detection Simulation using MITRE ATT&CK Framework                      |
+| ☁️ Cloud Security | `CloudHarden`    | AWS Security Audits, IaC Hardening, and Continuous Monitoring                 |
+| 🔐 Password Audit | `SentinelPass`   | CLI Tool for Enterprise Password Auditing using zxcvbn + JtR                  |
+| 🔁 DevSecOps      | `SecuGraph`      | Security-Integrated CI/CD Pipeline with Docker + GitHub Actions               |
+| 🤖 AI + Security  | Ongoing Research | Model Risk Mgmt, Threat Modeling, and Secure ML Pipelines                     |
 
 ---
 
@@ -35,88 +36,92 @@
 
 ```bash
 # Languages & Data Science
-Python | Bash | SQL | Scikit-learn | TensorFlow | Power BI
+Python | Bash | SQL | TensorFlow | Scikit-learn | Power BI
 
-# Cybersecurity & Pentesting
-Kali Linux | John the Ripper | OWASP ZAP | Burp Suite | Nmap | Metasploit | Nikto | zxcvbn
+# Offensive & Defensive Security
+Kali Linux | Burp Suite | OWASP ZAP | John the Ripper | Nmap | Metasploit | zxcvbn
 
-# Cloud & DevSecOps
-AWS CLI | Terraform | Docker | GitHub Actions | ScoutSuite | Pacu | Wazuh | Lynis
+# DevSecOps & Cloud
+Terraform | AWS CLI | Docker | GitHub Actions | ScoutSuite | Pacu | Wazuh | Lynis
 
-# Standards & Frameworks
-ISO/IEC 27001 | NIST CSF | GDPR | MITRE ATT&CK | OWASP Top 10 | CIS Benchmarks
-
+# Frameworks
+ISO 27001 | NIST CSF | MITRE ATT&CK | OWASP Top 10 | CIS Benchmarks | GDPR
+```
 
 ---
 
 ## 📂 Portfolio Highlights
 
----
-
 ### 🔐 SentinelPass – Password Security & Audit CLI Tool
-
-- 📌 Written in Python using modular CLI design  
-- 🧠 Simulates brute force, dictionary, and rule-based attacks  
-- 🔍 Integrates `zxcvbn`, `John the Ripper`, and entropy calculations  
-- 🏢 Ideal for enterprise password policy testing
-
----
+- 🛠️ Modular Python CLI  
+- 🚀 Simulates brute-force, dictionary, and rule-based attacks  
+- 🔐 Uses `zxcvbn`, `John the Ripper`, entropy scores  
+- ✅ Designed for enterprise password policy compliance  
 
 ### 🛡️ RedSage – Advanced Threat Detection Simulator
-
-- 📖 Aligned with [MITRE ATT&CK Framework](https://attack.mitre.org/)  
-- ⚔️ Simulates real-world adversarial behavior (TTPs)  
-- 🎯 Combines red team attack scripts and blue team response metrics
-
----
+- 🎯 MITRE ATT&CK Aligned  
+- ⚔️ Simulates real-world adversarial TTPs  
+- 🔁 Includes red-team scripts & blue-team detection logic  
 
 ### ☁️ CloudHarden – AWS Cloud Security Framework
+- 🔍 Misconfiguration detection using `ScoutSuite` & `Pacu`  
+- 🛠️ IaC Hardening via `Terraform`  
+- 📊 Continuous monitoring with `Wazuh`, `Lynis`
 
-- 🔎 Scans AWS infrastructure for misconfigurations using `ScoutSuite`, `Pacu`  
-- 🛠️ IaC Hardening with `Terraform`  
-- 📈 Continuous monitoring and reporting with `Wazuh` and `Lynis`
-
----
-
-### 🔁 SecuGraph – DevSecOps CI/CD Security Pipeline
-
-- 🔐 Injects security checks at every stage: code → build → deploy  
-- 🧪 Performs static secrets detection, IaC scans, Docker scanning  
-- ⚙️ Built as pipeline-as-code using **GitHub Actions**
+### 🔁 SecuGraph – DevSecOps CI/CD Pipeline
+- 📦 Injects security across all pipeline stages  
+- 🔎 Static secrets scanning, IaC validation, Docker hardening  
+- 🔁 Built on GitHub Actions + CLI automations  
 
 ---
 
 ## 📊 GitHub Activity
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=donutt2u&show_icons=true&theme=gruvbox)  
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=donutt2u&layout=compact&theme=gruvbox)  
-![Activity Graph](https://github-readme-activity-graph.cyclic.app/graph?username=donutt2u&theme=dracula)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=donutt2u&show_icons=true&theme=tokyonight" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=donutt2u&layout=compact&theme=tokyonight" alt="Top Languages" />
+  <br>
+  <img src="https://github-readme-activity-graph.cyclic.app/graph?username=donutt2u&theme=dracula" alt="Activity Graph" />
+</p>
 
 ---
 
 ## 🧠 Certifications & Trainings
 
-- 🔐 **Offensive Security Certified Professional (OSCP)** – *in progress*  
-- 📜 **ISO/IEC 27001:2022 Internal Auditor**  
-- 🎯 **NIST Cybersecurity Framework Practitioner**  
-- 🤖 **AI for Cybersecurity** – *NewtonAI Technologies USA*  
-- 🎓 Completed *200+ labs* in Ethical Hacking, AI Security, Cloud Security, and DevSecOps
+- 🛡️ Offensive Security Certified Professional (OSCP) – *In Progress*  
+- 📜 ISO/IEC 27001:2022 Internal Auditor  
+- 🎯 NIST Cybersecurity Framework Practitioner  
+- 🤖 AI for Cybersecurity – NewtonAI Technologies USA  
+- 🧪 200+ Labs across Cloud Security, AI Security, Ethical Hacking, DevSecOps  
 
 ---
 
-## 🗂️ Publications & Research (Coming Soon)
+## 🗂️ Publications & Research
 
-- 🧪 **AI-Augmented Threat Detection Systems**  
-- 📊 **Machine Learning Models for Intrusion Detection Systems**  
-- 📘 **Docker Vulnerability Assessment** – *Internship @ NewtonAI*
+📘 *Coming Soon…*
+
+- 🧪 AI-Augmented Threat Detection Systems  
+- 📊 Machine Learning for Intrusion Detection  
+- 🐳 Docker Vulnerability Assessment – Internship @ NewtonAI  
+
+---
+
+## 📫 Let's Connect
+
+<p align="center">
+  <a href="https://linkedin.com/in/donutt2u"><img src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin" /></a>
+  <a href="https://github.com/donutt2u"><img src="https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github" /></a>
+  <a href="https://hackerone.com/donutt_2u"><img src="https://img.shields.io/badge/-HackerOne-darkred?style=flat-square&logo=hackerone" /></a>
+  <a href="https://bugcrowd.com/donutt_2u"><img src="https://img.shields.io/badge/-Bugcrowd-orange?style=flat-square&logo=bugcrowd" /></a>
+</p>
+
+<p align="center">
+  📧 Email: <b>arslan@premiumhouseware.co.uk</b>
+</p>
 
 ---
 
-## 📫 Let’s Connect
-
-- 🔗 [LinkedIn](https://linkedin.com/in/donutt2u)  
-- 💻 [GitHub](https://github.com/donutt2u)  
-- 🔍 [HackerOne](https://hackerone.com/donutt_2u) | [Bugcrowd](https://bugcrowd.com/donutt_2u)  
-- ✉️ Email: `arslan@premiumhouseware.co.uk`
-
----
+<p align="center">
+  <i>“Security is not a product, but a process. Stay curious, stay vigilant.” – Bruce Schneier</i><br>
+  <img src="https://komarev.com/ghpvc/?username=donutt2u&style=flat-square&color=blue" alt="Profile views" />
+</p>
