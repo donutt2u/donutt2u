@@ -1,195 +1,789 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0D1117" />
-  <title>Muhammad Arslan Akhtar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <title>Muhammad Arslan Akhtar - Cybersecurity Expert</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    :root {
+      --primary: #00D9FF;
+      --secondary: #FF6B6B;
+      --accent: #4ECDC4;
+      --success: #00ffb3;
+      --bg-primary: #0D1117;
+      --bg-secondary: #161b22;
+      --bg-card: #1a1e26;
+      --text-primary: #ffffff;
+      --text-secondary: #8b949e;
+      --border: #30363d;
+      --glow: rgba(0, 217, 255, 0.3);
+    }
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .code-font {
       font-family: 'Fira Code', monospace;
-      background: #0D1117;
-      color: #ffffff;
     }
 
-    header,
-    footer {
-      text-align: center;
-      padding: 2rem;
+    /* Animated Background */
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(45deg, #0D1117, #161b22, #0D1117);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
     }
 
+    .animated-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(78, 205, 196, 0.1) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-20px) rotate(1deg); }
+      66% { transform: translateY(10px) rotate(-1deg); }
+    }
+
+    /* Header */
     .hero {
       text-align: center;
-      padding-top: 2rem;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+      50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
     }
 
     .hero h1 {
-      font-size: 2rem;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
       margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: slideInUp 1s ease-out;
     }
 
-    .hero img.typing {
-      margin-bottom: 1rem;
+    .typing-container {
+      margin: 2rem 0;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    .typing-text {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    @keyframes slideInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Badge Section */
     .badge-section {
       text-align: center;
-      margin: 2rem auto;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      animation: slideInUp 1s ease-out 0.3s both;
     }
 
-    .badge-section img {
-      margin: 0.3rem;
+    .badge {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
-    section {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 1rem;
-    }
-
-    .gif-banner {
+    .badge::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
       width: 100%;
-      border-radius: 8px;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s ease;
     }
 
-    .grid {
+    .badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 217, 255, 0.2);
+      border-color: var(--primary);
+    }
+
+    .badge:hover::before {
+      left: 100%;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    .about-content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 0 10px #00D9FF22;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #00D9FF;
-    }
-
-    .tech-icons img {
-      margin: 0.2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-top: 3rem;
     }
 
     .code-block {
-      background: #161b22;
-      color: #00ffb3;
-      padding: 1rem;
-      font-size: 0.9rem;
-      border-radius: 12px;
-      overflow-x: auto;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .code-block::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent), var(--secondary));
+    }
+
+    .code-content {
+      color: var(--success);
+      font-size: 0.95rem;
       white-space: pre-wrap;
       word-break: break-word;
     }
 
-    table {
-      width: 100%;
-      border-spacing: 1rem;
+    .about-text {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
     }
 
-    footer img {
-      margin: 0.5rem;
+    .about-text .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      position: relative;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 217, 255, 0.15);
+      border-color: var(--primary);
+    }
+
+    .card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .card h3 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-icon {
+      font-size: 1.8rem;
+      filter: drop-shadow(0 0 8px var(--primary));
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .card ul {
+      list-style: none;
+    }
+
+    .card li {
+      color: var(--text-secondary);
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .card li::before {
+      content: '▶';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    /* Tech Arsenal */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .tech-category {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .tech-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 217, 255, 0.1);
+    }
+
+    .tech-category h4 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .tech-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .tech-badge {
+      background: var(--bg-secondary);
+      color: var(--text-primary);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .tech-badge:hover {
+      background: var(--primary);
+      color: var(--bg-primary);
+      transform: scale(1.05);
+    }
+
+    /* Stats Section */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 4rem 2rem;
+      margin-top: 6rem;
+      border-top: 1px solid var(--border);
+      background: var(--bg-secondary);
+    }
+
+    .contact-info {
+      margin: 2rem 0;
+    }
+
+    .contact-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+      text-shadow: 0 0 10px var(--primary);
+    }
+
+    .quote {
+      font-style: italic;
+      color: var(--text-secondary);
+      margin-top: 2rem;
+      font-size: 1.1rem;
+    }
+
+    /* Animations */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .hero {
+        padding: 2rem 1rem;
+      }
+      
+      section {
+        padding: 0 1rem;
+      }
+      
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent);
     }
   </style>
 </head>
 
 <body>
+  <div class="animated-bg"></div>
+
   <header class="hero">
     <h1>👋 Hello, I'm <strong>Muhammad Arslan Akhtar</strong></h1>
-    <img class="typing" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=Cybersecurity+Consultant;Data+Scientist;Ethical+Hacker;AI+Security+Researcher;DevSecOps+Practitioner" alt="Typing SVG">
+    <div class="typing-container">
+      <div class="typing-text code-font" id="typing-text">Cybersecurity Consultant</div>
+    </div>
   </header>
 
   <section class="badge-section">
-    <img src="https://img.shields.io/badge/🔐_Empowering_Organizations-Through_AI_Driven_Security-00D9FF?style=for-the-badge&labelColor=1a1a1a" />
-    <img src="https://img.shields.io/badge/🌍_Global_Experience-5%2B_Years-FF6B6B?style=for-the-badge&labelColor=1a1a1a" />
-    <img src="https://img.shields.io/badge/🎯_Bug_Bounty-500%2B_Programs-4ECDC4?style=for-the-badge&labelColor=1a1a1a" />
+    <div class="badge">🔐 Empowering Organizations Through AI-Driven Security</div>
+    <div class="badge">🌍 Global Experience - 5+ Years</div>
+    <div class="badge">🎯 Bug Bounty Hunter - 500+ Programs</div>
   </section>
 
-  <section>
-    <img class="gif-banner" src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" alt="Cybersecurity Banner">
-  </section>
-
-  <section>
-    <h2>🚀 About Me</h2>
-    <div class="code-block">
-<code>
-const arslan = {
+  <section class="animate-on-scroll">
+    <div class="section-header">
+      <h2>🚀 About Me</h2>
+    </div>
+    <div class="about-content">
+      <div class="code-block">
+        <div class="code-content code-font">const arslan = {
   title: "Cybersecurity Consultant & AI Security Researcher",
   location: "🌍 Global (UK, USA, EU, Australia, Pakistan)",
-  education: ["MSc Cybersecurity", "MBA Management", "BS Applied Mathematics"],
-  specialties: ["Red/Blue Team Ops", "AIOps", "Privacy by Design", "Ethical Hacking"],
+  education: [
+    "MSc Cybersecurity", 
+    "MBA Management", 
+    "BS Applied Mathematics"
+  ],
+  specialties: [
+    "Red/Blue Team Operations",
+    "AIOps & Machine Learning Security",
+    "Privacy by Design",
+    "Ethical Hacking & Penetration Testing"
+  ],
   frameworks: ["ISO27001", "NIST CSF", "MITRE ATT&CK"],
-  currentFocus: "AI-Driven Security Solutions"
-};
-</code>
+  currentFocus: "AI-Driven Security Solutions",
+  passion: "Building secure digital futures"
+};</div>
+      </div>
+      <div class="about-text">
+        <p>As a <span class="highlight">cybersecurity consultant</span> and <span class="highlight">AI security researcher</span>, I specialize in protecting organizations from evolving digital threats through innovative, AI-driven security solutions.</p>
+        
+        <p>With over <span class="highlight">5 years of global experience</span> across UK, USA, EU, Australia, and Pakistan, I've helped organizations strengthen their security posture through comprehensive red team operations, cloud security implementations, and advanced threat detection systems.</p>
+        
+        <p>My approach combines traditional cybersecurity methodologies with cutting-edge AI technologies to create robust, scalable security frameworks that adapt to tomorrow's threats today.</p>
+      </div>
     </div>
   </section>
 
-  <section>
-    <h2>🔭 Focus Areas</h2>
+  <section class="animate-on-scroll">
+    <div class="section-header">
+      <h2>🔭 Focus Areas</h2>
+    </div>
     <div class="grid">
       <div class="card">
-        <h3>🛡️ Red Teaming</h3>
-        <p>RedSage - Threat Detection Simulator</p>
+        <h3><span class="card-icon">🛡️</span>Red Team Operations</h3>
+        <p><strong>RedSage</strong> - Advanced Threat Detection Simulator</p>
         <ul>
-          <li>Real-world adversary simulation</li>
-          <li>MITRE ATT&CK alignment</li>
-          <li>Threat workflows automation</li>
+          <li>Real-world adversary simulation and attack path modeling</li>
+          <li>MITRE ATT&CK framework alignment and mapping</li>
+          <li>Automated threat workflow orchestration</li>
+          <li>Custom payload development and evasion techniques</li>
         </ul>
       </div>
+      
       <div class="card">
-        <h3>☁️ Cloud Security</h3>
-        <p>CloudHarden - AWS Audit Framework</p>
+        <h3><span class="card-icon">☁️</span>Cloud Security</h3>
+        <p><strong>CloudHarden</strong> - AWS Security Audit Framework</p>
         <ul>
-          <li>IaC hardening</li>
-          <li>Security monitoring</li>
-          <li>Auto-remediation</li>
+          <li>Infrastructure as Code (IaC) security hardening</li>
+          <li>Real-time security monitoring and alerting</li>
+          <li>Automated compliance remediation workflows</li>
+          <li>Multi-cloud security posture management</li>
         </ul>
       </div>
+      
       <div class="card">
-        <h3>🔐 Password Security</h3>
-        <p>SentinelPass - Audit Toolkit</p>
+        <h3><span class="card-icon">🔐</span>Password Security</h3>
+        <p><strong>SentinelPass</strong> - Enterprise Audit Toolkit</p>
         <ul>
-          <li>Brute force testing</li>
-          <li>zxcvbn + JTR integration</li>
-          <li>Compliance reporting</li>
+          <li>Advanced brute force and dictionary attacks</li>
+          <li>zxcvbn + John the Ripper integration</li>
+          <li>Comprehensive compliance reporting</li>
+          <li>Password policy optimization recommendations</li>
         </ul>
       </div>
+      
       <div class="card">
-        <h3>🔁 DevSecOps</h3>
-        <p>SecuGraph - Security Pipelines</p>
+        <h3><span class="card-icon">🔁</span>DevSecOps</h3>
+        <p><strong>SecuGraph</strong> - Integrated Security Pipelines</p>
         <ul>
-          <li>GitHub Actions integrated</li>
-          <li>Multi-stage scans</li>
-          <li>Secrets detection</li>
+          <li>GitHub Actions CI/CD security integration</li>
+          <li>Multi-stage vulnerability scanning</li>
+          <li>Automated secrets detection and remediation</li>
+          <li>Container and infrastructure security scanning</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>🛠️ Tech Arsenal</h2>
-    <div class="tech-icons">
-      <p><strong>Languages & Tools:</strong></p>
-      <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-      <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" />
-      <img src="https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white" />
-      <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" />
-      <img src="https://img.shields.io/badge/Splunk-000000?style=for-the-badge&logo=splunk&logoColor=white" />
+  <section class="animate-on-scroll">
+    <div class="section-header">
+      <h2>🛠️ Tech Arsenal</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-category">
+        <h4>Programming & Scripting</h4>
+        <div class="tech-icons">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Bash</span>
+          <span class="tech-badge">PowerShell</span>
+          <span class="tech-badge">Go</span>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h4>Security Tools</h4>
+        <div class="tech-icons">
+          <span class="tech-badge">Metasploit</span>
+          <span class="tech-badge">Burp Suite</span>
+          <span class="tech-badge">Nmap</span>
+          <span class="tech-badge">Wireshark</span>
+          <span class="tech-badge">OWASP ZAP</span>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h4>Cloud & DevOps</h4>
+        <div class="tech-icons">
+          <span class="tech-badge">AWS</span>
+          <span class="tech-badge">Azure</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Kubernetes</span>
+          <span class="tech-badge">Terraform</span>
+        </div>
+      </div>
+      
+      <div class="tech-category">
+        <h4>AI & Analytics</h4>
+        <div class="tech-icons">
+          <span class="tech-badge">TensorFlow</span>
+          <span class="tech-badge">PyTorch</span>
+          <span class="tech-badge">Splunk</span>
+          <span class="tech-badge">ELK Stack</span>
+          <span class="tech-badge">Pandas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="animate-on-scroll">
+    <div class="section-header">
+      <h2>📊 Impact & Achievements</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Bug Bounty Programs</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Organizations Secured</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label">Vulnerabilities Found</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Threat Monitoring</div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <img src="https://github-readme-stats.vercel.app/api?username=donutt2u&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-    <p>📞 arslan@premiumhouseware.co.uk</p>
-    <p>✨ "Security is not a product, but a process." — Bruce Schneier</p>
+    <div class="contact-info">
+      <p>📧 <a href="mailto:arslan@premiumhouseware.co.uk" class="contact-link">arslan@premiumhouseware.co.uk</a></p>
+      <p>🔗 Let's connect and secure the digital world together</p>
+    </div>
+    <div class="quote">
+      "Security is not a product, but a process." — Bruce Schneier
+    </div>
   </footer>
-</body>
 
+  <script>
+    // Typing Animation
+    const phrases = [
+      "Cybersecurity Consultant",
+      "Data Scientist", 
+      "Ethical Hacker",
+      "AI Security Researcher",
+      "DevSecOps Practitioner",
+      "Bug Bounty Hunter"
+    ];
+    
+    let currentPhrase = 0;
+    let currentChar = 0;
+    let isDeleting = false;
+    const typingElement = document.getElementById('typing-text');
+    
+    function typeWriter() {
+      const current = phrases[currentPhrase];
+      
+      if (isDeleting) {
+        typingElement.textContent = current.substring(0, currentChar - 1);
+        currentChar--;
+      } else {
+        typingElement.textContent = current.substring(0, currentChar + 1);
+        currentChar++;
+      }
+      
+      let speed = isDeleting ? 50 : 100;
+      
+      if (!isDeleting && currentChar === current.length) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && currentChar === 0) {
+        isDeleting = false;
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        speed = 500;
+      }
+      
+      setTimeout(typeWriter, speed);
+    }
+    
+    // Start typing animation
+    typeWriter();
+    
+    // Scroll Animation
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all elements with animate-on-scroll class
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Smooth scrolling for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Add some interactive effects
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-8px) rotateX(5deg)';
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) rotateX(0)';
+      });
+    });
+  </script>
+</body>
 </html>
