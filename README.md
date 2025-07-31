@@ -34,7 +34,6 @@
 
 ## 🛠️ Tech Stack & Tools
 
-```bash
 # Languages & Data Science
 Python | Bash | SQL | TensorFlow | Scikit-learn | Power BI
 
@@ -46,7 +45,6 @@ Terraform | AWS CLI | Docker | GitHub Actions | ScoutSuite | Pacu | Wazuh | Lyni
 
 # Frameworks
 ISO 27001 | NIST CSF | MITRE ATT&CK | OWASP Top 10 | CIS Benchmarks | GDPR
-```
 
 ---
 
