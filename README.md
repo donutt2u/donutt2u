@@ -34,16 +34,16 @@
 
 ## 🛠️ Tech Stack & Tools
 
-# Languages & Data Science
+### Languages & Data Science
 Python | Bash | SQL | TensorFlow | Scikit-learn | Power BI
 
-# Offensive & Defensive Security
+### Offensive & Defensive Security
 Kali Linux | Burp Suite | OWASP ZAP | John the Ripper | Nmap | Metasploit | zxcvbn
 
-# DevSecOps & Cloud
+### DevSecOps & Cloud
 Terraform | AWS CLI | Docker | GitHub Actions | ScoutSuite | Pacu | Wazuh | Lynis
 
-# Frameworks
+### Frameworks
 ISO 27001 | NIST CSF | MITRE ATT&CK | OWASP Top 10 | CIS Benchmarks | GDPR
 
 ---
