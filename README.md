@@ -12,7 +12,7 @@ Hello! I'm **Muhammad Arslan Akhtar**, a dedicated Cybersecurity Consultant and 
 
 You can view my interactive personal landing page here:
 
-**[Visit My Portfolio Website]([https://yourusername.github.io/your-repository-name/](https://arslan-akhtar-cybersecur-iy4ithv.gamma.site/))**
+**[Visit My Portfolio Website]([https://yourusername.github.io/your-repository-name/](https://arslan-akhtar-cybersecur-iy4ithv.gamma.site/)**
 
 
 ---
